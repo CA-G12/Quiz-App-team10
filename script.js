@@ -96,6 +96,21 @@ const questions = [
   },
 ];
 
+
+
+function localStorage1(){
+  const gettingLS= localStorage.getItem("counter-question")
+  let con = JSON.parse(gettingLS)
+  console.log({con})
+  let after=con+1
+  console.log({after})
+  const level = document.querySelector('#level')
+  console.log(level)
+  level.textContent = after
+  localStorage.setItem('counter-question',JSON.stringify(after))
+}
+
+
 function loadFunction(id) {
   const qContainer = document.getElementById("question");
   const question = questions[id];
@@ -127,8 +142,10 @@ function loadFunction(id) {
 let questionNumber = Math.floor(Math.random() * 16);
 let arrNum = [];
 arrNum.push(questionNumber);
-console.log(arrNum);
 loadFunction(questionNumber);
+
+const counterQus = 0;
+localStorage.setItem('counter-question',JSON.stringify(counterQus))
 
 const nextButton = document.querySelector(".question-button");
 nextButton.addEventListener("click", nextQuestion);
@@ -137,7 +154,7 @@ function nextQuestion() {
   const uHeader = document.querySelector(".head-question");
   uHeader.textContent = "";
   ulList.textContent = "";
-  console.log(questionNumber);
+  localStorage1()
   if (arrNum.length === 10) {
     console.log("STOP");
     uHeader.textContent = "Congratulations";
@@ -150,5 +167,6 @@ function nextQuestion() {
     // console.log('fsd')
     questionNumber = Math.floor(Math.random() * 16);
     nextQuestion();
+    // localStorage1()
   }
 }
