@@ -1,61 +1,61 @@
 const questions = [
   {
-    question: "Which organ belongs to the Digestive System:",
+    question: "1- Which organ belongs to the Digestive System:",
     options: ["Thymus", "Stomach", "Heart", "Trachea"],
     answer: 1,
   },
   {
-    question: "Adults have fewer bones than babies do.",
+    question: "2- Adults have fewer bones than babies do.",
     options: ["true", "false"],
     answer: 0,
   },
   {
-    question: "Our human body has.........",
+    question: "3- Our human body has.........",
     options: ["206 bones", "210 bones", "306 bones", "706 bones"],
     answer: 0,
   },
   {
-    question: "Your fingernails and hair keep growing after you die.",
+    question: "4- Your fingernails and hair keep growing after you die.",
     options: ["true", "false"],
     answer: 1,
   },
   {
-    question: "One important function of bones is to produce.",
+    question: "5- One important function of bones is to produce.",
     options: ["tendons", "ligaments", "blood cells", "cartilage"],
     answer: 2,
   },
   {
     question:
-      "Which of the following has become the first country to make all forms of public transport free?",
+      "6- Which of the following has become the first country to make all forms of public transport free?",
     options: ["Monaco", "Liechtenstein", "Luxembourg", "Andorra"],
     answer: 2,
   },
   {
     question:
-      "Which of the following has become the first country to make all forms of public transport free?",
+      "7- Which of the following has become the first country to make all forms of public transport free?",
     options: ["Monaco", "India", "Japan", "Singapore"],
     answer: 3,
   },
   {
     question:
-      "Which country is to host Commonwealth shooting, archery events in 2022?",
+      "8- Which country is to host Commonwealth shooting, archery events in 2022?",
     options: ["Australia", "India", "Brunei", "Cameroon"],
     answer: 3,
   },
   {
     question:
-      "26 The International Criminal Police Organisation (INTERPOL) has its headquarters at",
+      "9- 26 The International Criminal Police Organisation (INTERPOL) has its headquarters at",
     options: ["Montreal", "Bonn", "Paris", "London"],
     answer: 2,
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "10- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
   {
-    question: "Who was known as Iron man of India?",
+    question: "11- Who was known as Iron man of India?",
     options: [
       "Govind Ballabh Pant",
       "awaharlal Nehru",
@@ -66,40 +66,40 @@ const questions = [
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "12- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "13- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "14- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "15- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
   {
     question:
-      "30 Where is the headquarters of Botanical Survey of India located?",
+      "16- 30 Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
     answer: 0,
   },
 ];
 
-function loadFunction() {
-  console.log("HERE");
+function loadFunction(id) {
   const qContainer = document.getElementById("question");
-  const question = questions[Math.floor(Math.random() * 10)];
+  const question = questions[id];
+
   qContainer.textContent = question.question;
   const ulList = document.querySelector(".options");
   question.options.map((ele, index) => {
@@ -124,5 +124,31 @@ function loadFunction() {
     ulList.appendChild(li);
   });
 }
+let questionNumber = Math.floor(Math.random() * 16);
+let arrNum = [];
+arrNum.push(questionNumber);
+console.log(arrNum);
+loadFunction(questionNumber);
 
-loadFunction();
+const nextButton = document.querySelector(".question-button");
+nextButton.addEventListener("click", nextQuestion);
+function nextQuestion() {
+  const ulList = document.querySelector(".options");
+  const uHeader = document.querySelector(".head-question");
+  uHeader.textContent = "";
+  ulList.textContent = "";
+  console.log(questionNumber);
+  if (arrNum.length === 10) {
+    console.log("STOP");
+    uHeader.textContent = "Congratulations";
+    ulList.textContent = "You have successfully completed the quiz";
+    console.log(arrNum);
+  } else if (!arrNum.includes(questionNumber)) {
+    arrNum.push(questionNumber);
+    loadFunction(questionNumber);
+  } else {
+    // console.log('fsd')
+    questionNumber = Math.floor(Math.random() * 16);
+    nextQuestion();
+  }
+}
