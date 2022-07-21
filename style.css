@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
 .main{
     display: flex;
     justify-content: space-around;
@@ -8,8 +13,12 @@
 
 }
 .description-section{
+    height: 29rem;
     width: 50%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 h1{
     font-size: 80px;
@@ -35,4 +44,88 @@ h1 .span-home{
 .start-but a{
     text-decoration: none;
     color: white;
+}
+
+.header1{
+    background-color: #51cb95;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+
+}
+div{
+    font-size: 20px;
+    color: #089555;
+    font-weight: bold;
+    width: 100%;
+    text-align:center;
+    padding: 1rem;
+}
+.question-body{
+    /* background-color: #89a3ae; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    width: 50%;
+    box-shadow: 10px 10px 10px 0px #65c499;
+    border: 1px solid #65c499;
+}
+
+.head-question{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+}
+.options{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+.options div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.options div label{
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.answers{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 80%;
+    
+    
+    /* background-color: red; */
+}
+.question-button{background: #51cb95;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    color: white;
+    border: none;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    align-self: flex-end;
+    cursor: pointer;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-button :hover{
+    background-color: #389d6f;
 }
