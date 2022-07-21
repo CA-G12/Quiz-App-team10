@@ -96,18 +96,18 @@ const questions = [
   },
 ];
 
+// To show the number of the first question 
+const FLevel = document.querySelector('#level')
+FLevel.textContent = 1
 
 
 function localStorage1(){
   const gettingLS= localStorage.getItem("counter-question")
-  let con = JSON.parse(gettingLS)
-  console.log({con})
-  let after=con+1
-  console.log({after})
+  let count = (JSON.parse(gettingLS))+1
+
   const level = document.querySelector('#level')
-  console.log(level)
-  level.textContent = after
-  localStorage.setItem('counter-question',JSON.stringify(after))
+  level.textContent = count
+  localStorage.setItem('counter-question',JSON.stringify(count))
 }
 
 
@@ -144,29 +144,28 @@ let arrNum = [];
 arrNum.push(questionNumber);
 loadFunction(questionNumber);
 
-const counterQus = 0;
+const counterQus = 1;
 localStorage.setItem('counter-question',JSON.stringify(counterQus))
 
 const nextButton = document.querySelector(".question-button");
 nextButton.addEventListener("click", nextQuestion);
+
 function nextQuestion() {
   const ulList = document.querySelector(".options");
   const uHeader = document.querySelector(".head-question");
   uHeader.textContent = "";
   ulList.textContent = "";
-  localStorage1()
+  
   if (arrNum.length === 10) {
     console.log("STOP");
     uHeader.textContent = "Congratulations";
     ulList.textContent = "You have successfully completed the quiz";
-    console.log(arrNum);
   } else if (!arrNum.includes(questionNumber)) {
     arrNum.push(questionNumber);
     loadFunction(questionNumber);
+    localStorage1()
   } else {
-    // console.log('fsd')
     questionNumber = Math.floor(Math.random() * 16);
     nextQuestion();
-    // localStorage1()
   }
 }
