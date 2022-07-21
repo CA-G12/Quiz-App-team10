@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.landing-img{
+    width: 47%;
+
+}
+.description-section{
+    width: 50%;
+    text-align: center;
+}
+h1{
+    font-size: 80px;
+    color: #CDCDCD;
+}
+
+h1 .span-home{
+    font-size: 100px;
+    color: #1C2E35;
+}
+
+.start-but{
+    background: #51cb95;
+    border-radius: 30px;
+    width: 200px;
+    height: 61px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    
+}
+
+.start-but a{
+    text-decoration: none;
+    color: white;
+}
