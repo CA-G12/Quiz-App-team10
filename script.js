@@ -165,8 +165,8 @@ function nextQuestion() {
   }
   if (arrNum.length === 10) {
     console.log("STOP");
-    let finalScore = localStorage.getItem("score");
-    uHeader.textContent = `your score is ${finalScore}`;
+    // let finalScore = localStorage.getItem("score");
+    uHeader.textContent = `your score is ${score}`;
     nextButton.remove();
     counterId.remove();
   } else if (!arrNum.includes(questionNumber)) {
