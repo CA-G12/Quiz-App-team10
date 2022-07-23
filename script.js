@@ -112,6 +112,22 @@ const questions = [
   },
 ];
 
+
+// To show the number of the first question 
+const FLevel = document.querySelector('#level')
+FLevel.textContent = 1
+
+
+function localStorage1(){
+  const gettingLS= localStorage.getItem("counter-question")
+  let count = (JSON.parse(gettingLS))+1
+
+  const level = document.querySelector('#level')
+  level.textContent = count
+  localStorage.setItem('counter-question',JSON.stringify(count))
+}
+
+
 // let counter = 0;
 let score = 0;
 
@@ -151,16 +167,23 @@ let arrNum = [];
 arrNum.push(questionNumber);
 loadFunction(questionNumber);
 
+
+const counterQus = 1;
+localStorage.setItem('counter-question',JSON.stringify(counterQus))
+
+
 const counterId = document.querySelector("#counter");
 const nextButton = document.querySelector(".question-button");
 nextButton.addEventListener("click", nextQuestion);
+
 function nextQuestion() {
   const ulList = document.querySelector(".options");
   const uHeader = document.querySelector(".head-question");
   uHeader.textContent = "";
   ulList.textContent = "";
 
-  if (counter == 9) {
+
+  if (arrNum.length == 9) {
     nextButton.textContent = "submit";
   }
   if (arrNum.length === 10) {
@@ -172,6 +195,7 @@ function nextQuestion() {
   } else if (!arrNum.includes(questionNumber)) {
     arrNum.push(questionNumber);
     loadFunction(questionNumber);
+    localStorage1()
   } else {
     questionNumber = Math.floor(Math.random() * 16);
     nextQuestion();
