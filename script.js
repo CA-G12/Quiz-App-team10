@@ -112,7 +112,7 @@ const questions = [
   },
 ];
 
-let counter = 0;
+// let counter = 0;
 let score = 0;
 
 function loadFunction(id) {
@@ -120,8 +120,8 @@ function loadFunction(id) {
   const question = questions[id];
 
   qContainer.textContent = question.question;
-  const count = document.querySelector("#level");
-  count.textContent = ++counter;
+  // const count = document.querySelector("#level");
+  // count.textContent = ++counter;
   const ulList = document.querySelector(".options");
   question.options.map((ele, index) => {
     const li = document.createElement("li");
