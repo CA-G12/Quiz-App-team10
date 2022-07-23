@@ -1,106 +1,127 @@
 const questions = [
   {
-    question: "1- Which organ belongs to the Digestive System:",
-    options: ["Thymus", "Stomach", "Heart", "Trachea"],
-    answer: 1,
-  },
-  {
-    question: "2- Adults have fewer bones than babies do.",
-    options: ["true", "false"],
-    answer: 0,
-  },
-  {
-    question: "3- Our human body has.........",
-    options: ["206 bones", "210 bones", "306 bones", "706 bones"],
-    answer: 0,
-  },
-  {
-    question: "4- Your fingernails and hair keep growing after you die.",
-    options: ["true", "false"],
-    answer: 1,
-  },
-  {
-    question: "5- One important function of bones is to produce.",
-    options: ["tendons", "ligaments", "blood cells", "cartilage"],
-    answer: 2,
-  },
-  {
-    question:
-      "6- Which of the following has become the first country to make all forms of public transport free?",
-    options: ["Monaco", "Liechtenstein", "Luxembourg", "Andorra"],
-    answer: 2,
-  },
-  {
-    question:
-      "7- Which of the following has become the first country to make all forms of public transport free?",
-    options: ["Monaco", "India", "Japan", "Singapore"],
-    answer: 3,
-  },
-  {
-    question:
-      "8- Which country is to host Commonwealth shooting, archery events in 2022?",
-    options: ["Australia", "India", "Brunei", "Cameroon"],
-    answer: 3,
-  },
-  {
-    question:
-      "9- 26 The International Criminal Police Organisation (INTERPOL) has its headquarters at",
-    options: ["Montreal", "Bonn", "Paris", "London"],
-    answer: 2,
-  },
-  {
-    question:
-      "10- 30 Where is the headquarters of Botanical Survey of India located?",
-    options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
-  },
-  {
-    question: "11- Who was known as Iron man of India?",
+    question: "'.mov' extension refers usually to what kind of file?",
     options: [
-      "Govind Ballabh Pant",
-      "awaharlal Nehru",
-      "Subhash Chandra Bose",
-      "Sardar Vallabhbhai Patel ",
+      "Image file",
+      "Animation/movie file",
+      "Audio file",
+      "MS Office document",
     ],
-    answer: 0,
+    answer: "Animation/movie file",
+  },
+  {
+    question: "'OS' computer abbreviation usually means ?",
+    options: [
+      "Order of Significance",
+      "Open Software",
+      "Operating System",
+      "Optical Sensor",
+    ],
+    answer: "Operating System",
+  },
+  {
+    question: "Our human body has.........",
+    options: ["206 bones", "210 bones", "306 bones", "706 bones"],
+    answer: "206 bones",
   },
   {
     question:
-      "12- 30 Where is the headquarters of Botanical Survey of India located?",
-    options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
+      "	What is part of a database that holds only one type of information?",
+    options: ["Report", "Field", "Record", "File"],
+    answer: "Field",
+  },
+  {
+    question: "One important function of bones is to produce.",
+    options: ["tendons", "ligaments", "blood cells", "cartilage"],
+    answer: "blood cells",
+  },
+  {
+    question: "'.MPG' extension refers usually to what kind of file?",
+    options: [
+      "WordPerfect Document file",
+      "MS Office document",
+      "Animation/movie file",
+      "Image file",
+    ],
+    answer: "Animation/movie file",
   },
   {
     question:
-      "13- 30 Where is the headquarters of Botanical Survey of India located?",
-    options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
+      "Which of the following has become the first country to make all forms of public transport free?",
+    options: ["Monaco", "India", "Japan", "Singapore"],
+    answer: "Singapore",
   },
   {
     question:
-      "14- 30 Where is the headquarters of Botanical Survey of India located?",
+      "Which country is to host Commonwealth shooting, archery events in 2022?",
+    options: ["Australia", "India", "Brunei", "Cameroon"],
+    answer: "Cameroon",
+  },
+  {
+    question: "Which of the following is not javascript data types?",
+    options: [
+      "Null type",
+      "Undefined type",
+      "Number type",
+      "All of the mentioned",
+    ],
+    answer: "All of the mentioned",
+  },
+  {
+    question: "Where is the headquarters of Botanical Survey of India located?",
     options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
+    answer: "Kolkata",
   },
   {
     question:
-      "15- 30 Where is the headquarters of Botanical Survey of India located?",
-    options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
+      "Which of the object is the main entry point to all client-side JavaScript features and APIs?",
+    options: ["Position", "Window", "Standard", "Location"],
+    answer: "Window",
   },
   {
     question:
-      "16- 30 Where is the headquarters of Botanical Survey of India located?",
-    options: ["Kolkata", "Lucknow", "Ootacmund", "Darjeeling"],
-    answer: 0,
+      "Which of the following can be used to call a JavaScript Code Snippet?",
+    options: ["Function/Method", "Preprocessor", "Triggering Event", " RMI"],
+    answer: "Function/Method",
+  },
+  {
+    question: "Which of the following scoping type does JavaScript use?",
+    options: ["Sequential", "Segmental", "Lexical", "Literal"],
+    answer: "Lexical",
+  },
+  {
+    question: "Which of the following is not a framework?",
+    options: ["JavaScript .NET", "JavaScript", "Cocoa JS", "jQuery"],
+    answer: "JavaScript",
+  },
+  {
+    question:
+      "Which of the following is the property that is triggered in response to JS errors?",
+    options: ["onclick", "onerror", "onmessage", " onexception"],
+    answer: "onerror",
+  },
+  {
+    question: "Which of the following is not an error in JavaScript?",
+    options: [
+      "Missing of Bracket",
+      "Division by zero",
+      " Syntax error",
+      "Missing of semicolons",
+    ],
+    answer: "Division by zero",
   },
 ];
+
+// let counter = 0;
+let score = 0;
 
 function loadFunction(id) {
   const qContainer = document.getElementById("question");
   const question = questions[id];
 
   qContainer.textContent = question.question;
+  // const count = document.querySelector("#level");
+  // count.textContent = ++counter;
   const ulList = document.querySelector(".options");
   question.options.map((ele, index) => {
     const li = document.createElement("li");
@@ -124,12 +145,13 @@ function loadFunction(id) {
     ulList.appendChild(li);
   });
 }
+
 let questionNumber = Math.floor(Math.random() * 16);
 let arrNum = [];
 arrNum.push(questionNumber);
-console.log(arrNum);
 loadFunction(questionNumber);
 
+const counterId = document.querySelector("#counter");
 const nextButton = document.querySelector(".question-button");
 nextButton.addEventListener("click", nextQuestion);
 function nextQuestion() {
@@ -137,18 +159,35 @@ function nextQuestion() {
   const uHeader = document.querySelector(".head-question");
   uHeader.textContent = "";
   ulList.textContent = "";
-  console.log(questionNumber);
+
+  if (counter == 9) {
+    nextButton.textContent = "submit";
+  }
   if (arrNum.length === 10) {
     console.log("STOP");
-    uHeader.textContent = "Congratulations";
-    ulList.textContent = "You have successfully completed the quiz";
-    console.log(arrNum);
+    // let finalScore = localStorage.getItem("score");
+    uHeader.textContent = `your score is ${score}`;
+    nextButton.remove();
+    counterId.remove();
   } else if (!arrNum.includes(questionNumber)) {
     arrNum.push(questionNumber);
     loadFunction(questionNumber);
   } else {
-    // console.log('fsd')
     questionNumber = Math.floor(Math.random() * 16);
     nextQuestion();
   }
 }
+
+
+
+const input = document.querySelectorAll(`[name="answer"]`);
+const ulList = document.querySelector(".options");
+ulList.addEventListener("click", (e) => {
+  console.log(e.path[0].textContent);
+  console.log(e);
+  if (e.path[0].textContent === questions[questionNumber].answer) {
+    score++;
+    localStorage.setItem("score", JSON.stringify(score));
+    console.log(score);
+  }
+});
