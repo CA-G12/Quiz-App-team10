@@ -3,6 +3,10 @@
     padding: 0px;
     margin: 0px;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+
+   }
 .main{
     display: flex;
     justify-content: space-around;
@@ -23,6 +27,7 @@
 h1{
     font-size: 80px;
     color: #CDCDCD;
+    text-align: center;
 }
 
 h1 .span-home{
@@ -48,9 +53,6 @@ h1 .span-home{
 
 .header1{
     background-color: #51cb95;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1rem;
     width: 100%;
 
@@ -69,7 +71,7 @@ div{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding-top: 1rem;
     width: 50%;
     box-shadow: 10px 10px 10px 0px #65c499;
@@ -118,7 +120,7 @@ div{
     font-size: 22px;
     color: white;
     border: none;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-right: 10rem;
     align-self: flex-end;
     cursor: pointer;
