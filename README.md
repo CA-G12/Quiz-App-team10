@@ -1,6 +1,8 @@
 # Quiz-App-team10
 ## Project description 
 QuizApp is a website, enables the user to undertake a series of questions on general knowledge. The website is user friendly, and the user shall find it extremely easy to answer the multiple-choice questions. At the end of the quiz, a result-report is generated which states the score.
+
+## You can check the website [here](https://ca-g12.github.io/Quiz-App-team10/).
 ## QUIZ APP
 - Landing page
 - Questions page
